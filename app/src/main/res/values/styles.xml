@@ -48,7 +48,7 @@
     <!-- Toolbar -->
 
     <style name="ToolbarContainer" parent="FullWidth">
-        <item name="android:theme">@style/AppTheme.AppBarOverlay</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
     </style>
 
     <style name="Toolbar" parent="FullWidth">

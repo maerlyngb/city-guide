@@ -2,7 +2,9 @@ package io.maerlyn.cityguide;
 
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
+import android.support.design.widget.TabLayout;
 import android.support.v4.view.GravityCompat;
+import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
@@ -32,6 +34,17 @@ public class MainActivity extends AppCompatActivity
         // listen for nav items being clicked
         NavigationView navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+
+        // setup tabbed content
+        ViewPager viewPager = findViewById(R.id.viewpager);
+        if (viewPager != null) {
+            setupViewPager(viewPager);
+        }
+
+        // display tabbed content
+        TabLayout tabLayout = findViewById(R.id.sliding_tabs);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
     /**
@@ -83,5 +96,20 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    /**
+     * Display tabbed content
+     *
+     * @param viewPager pager that handles swiping through tabs
+     */
+    private void setupViewPager(ViewPager viewPager) {
+        FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager());
+        fragmentAdapter.addFragment(new AttractionListFragment(), "Tab 1");
+        fragmentAdapter.addFragment(new AttractionListFragment(), "Tab 2");
+        fragmentAdapter.addFragment(new AttractionListFragment(), "Tab 3");
+        fragmentAdapter.addFragment(new AttractionListFragment(), "Tab 4");
+
+        viewPager.setAdapter(fragmentAdapter);
     }
 }

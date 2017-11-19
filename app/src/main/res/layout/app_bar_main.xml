@@ -8,13 +8,15 @@
 
     <!-- Tool Bar Container -->
     <android.support.design.widget.AppBarLayout
-        style="@style/ToolbarContainer">
+        style="@style/ToolbarContainer"
+        app:elevation="0dp">
 
         <!-- Toolbar -->
         <android.support.v7.widget.Toolbar
             android:id="@+id/toolbar"
             style="@style/Toolbar"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            app:layout_scrollFlags="scroll|enterAlways|snap"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     </android.support.design.widget.AppBarLayout>
 
