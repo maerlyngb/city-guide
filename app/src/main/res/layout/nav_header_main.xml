@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- Side Nav Header -->
+<LinearLayout
+    style="@style/SideNavHeaderLayout">
+
+    <!-- Side Nav Title Text -->
+    <TextView
+        style="@style/SideNavHeaderTitle"/>
+
+</LinearLayout>
