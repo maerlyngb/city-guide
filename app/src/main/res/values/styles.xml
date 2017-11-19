@@ -1,21 +1,17 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/colorSecondary</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!-- Shared Styles -->
 
@@ -48,7 +44,6 @@
     <!-- Toolbar -->
 
     <style name="ToolbarContainer" parent="FullWidth">
-        <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
     </style>
 
     <style name="Toolbar" parent="FullWidth">
@@ -68,22 +63,26 @@
     <style name="SideNavHeaderLayout">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">@dimen/nav_header_height</item>
-        <item name="android:background">@color/colorPrimary</item>
         <item name="android:gravity">bottom</item>
         <item name="android:orientation">vertical</item>
-        <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
-        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
-        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
-        <item name="android:paddingTop">@dimen/activity_vertical_margin</item>
         <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark</item>
     </style>
 
-    <style name="SideNavHeaderTitle">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingTop">@dimen/nav_header_vertical_spacing</item>
+    <style name="SideNavHeaderTitle" parent="FullWidth">
         <item name="android:text">@string/city_name</item>
-        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Body1</item>
+        <item name="android:textColor">@color/primaryText</item>
+        <item name="android:textSize">@dimen/nav_header_title_text</item>
+        <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
+        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
+        <item name="android:paddingTop">@dimen/nav_header_title_vertical_spacing</item>
+    </style>
+
+    <!-- Attraction List -->
+
+    <style name="AttractionList" parent="MatchParent">
+        <item name="android:orientation">vertical</item>
+        <item name="android:padding">16dp</item>
     </style>
 
 </resources>

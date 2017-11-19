@@ -105,10 +105,10 @@ public class MainActivity extends AppCompatActivity
      */
     private void setupViewPager(ViewPager viewPager) {
         FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager());
-        fragmentAdapter.addFragment(new AttractionListFragment(), "Tab 1");
-        fragmentAdapter.addFragment(new AttractionListFragment(), "Tab 2");
-        fragmentAdapter.addFragment(new AttractionListFragment(), "Tab 3");
-        fragmentAdapter.addFragment(new AttractionListFragment(), "Tab 4");
+        fragmentAdapter.addFragment(new AttractionListFragment(), "Visit");
+        fragmentAdapter.addFragment(new AttractionListFragment(), "Eat");
+        fragmentAdapter.addFragment(new AttractionListFragment(), "Drink");
+        fragmentAdapter.addFragment(new AttractionListFragment(), "Sleep");
 
         viewPager.setAdapter(fragmentAdapter);
     }

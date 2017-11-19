@@ -3,4 +3,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
+    <group android:checkableBehavior="single">
+        <item
+            android:title="Public Transport" />
+        <item
+            android:title="Item 2" />
+        <item
+            android:title="Item 3" />
+        <item
+            android:title="Item 4" />
+    </group>
+
 </menu>
