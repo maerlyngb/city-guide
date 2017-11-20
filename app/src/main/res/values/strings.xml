@@ -6,4 +6,128 @@
 
     <string name="action_settings">Settings</string>
     <string name="city_name">Sydney</string>
+    <string name="sydney_scenery">Sydney Scenery</string>
+    <string name="visit_tab_title">Visit</string>
+    <string name="eat_tab_title">Eat</string>
+    <string name="drink_tab_title">Drink</string>
+    <string name="sleep_tab_title">Sleep</string>
+    <string name="city_name_and_country">Sydney, Australia</string>
+
+
+    <string name="attraction_image">Attraction Image</string>
+    <string name="attr_directions">Directions</string>
+    <string name="attr_call">Call</string>
+    <string name="attr_website">Website</string>
+
+    <!-- Sydney Opera House -->
+    <string name="oh_name">Opera House</string>
+    <string name="oh_phone_num">+610292507111</string>
+    <string name="oh_url">https://www.sydneyoperahouse.com/</string>
+    <string name="oh_desc">The Sydney Opera House is a multi-venue performing arts centre in Sydney, New South Wales, Australia. It is one of the 20th century\'s most famous and distinctive buildings.</string>
+
+    <!-- Royal Botanic Gardens -->
+    <string name="rbg_name">Royal Botanic Gardens</string>
+    <string name="rbg_phone_num">+61292318111</string>
+    <string name="rbg_url">https://www.rbgsyd.nsw.gov.au/</string>
+    <string name="rbg_desc">The Royal Botanic Garden Sydney is a major botanical garden located in the heart of Sydney, New South Wales, Australia. Opened in 1816, the garden is the oldest scientific institution in Australia and one of the most important historic botanical institutions in the world. It is open every day of the year and access is free.</string>
+
+    <!-- Blue Mountains -->
+    <string name="bm_name">Blue Mountains</string>
+    <string name="bm_phone_num">+61247385200</string>
+    <string name="bm_url">https://www.visitnsw.com/destinations/blue-mountains</string>
+    <string name="bm_desc">The Blue Mountains is a mountainous region and a mountain range located in New South Wales, Australia. The region borders on Sydney\'s metropolitan area, its foothills starting about 50 kilometres (31 mi) west of the state capital.</string>
+
+    <!-- Manly Beach-->
+    <string name="mb_name">Manly Beach</string>
+    <string name="mb_phone_num">+61299761430</string>
+    <string name="mb_url">https://www.manlyaustralia.com.au/</string>
+    <string name="mb_desc">Manly Beach is a beach situated among the Northern Beaches of Sydney, Australia in Manly, New South Wales. From north to south, the three main sections are Queenscliff, North Steyne, and South Steyne.</string>
+
+    <!-- Ester -->
+    <string name="e_name">Ester</string>
+    <string name="e_phone_num">+610280688279</string>
+    <string name="e_url">http://www.ester-restaurant.com.au/</string>
+    <string name="e_desc">Trendy restaurant executing eclectic dishes in a concrete-walled space with a wood-fired oven.</string>
+
+    <!-- Bennelong -->
+    <string name="b_name">Bennelong</string>
+    <string name="b_phone_num">+610292408000</string>
+    <string name="b_url">https://www.bennelong.com.au/</string>
+    <string name="b_desc">Nestled within the famous Sydney Opera House, this is a gourmet experience not to miss. With a multi-level layout offering diners different options for those indulging in dinner and a show and those wanting a bite and drinks. Diners have the option to pick from a wide range of delicious drinks, set menus or casual à la carte options.</string>
+
+    <!-- Spice Temple -->
+    <string name="st_name">Spice Temple</string>
+    <string name="st_phone_num">+610280781888</string>
+    <string name="st_url">http://www.spicetemple.com.au</string>
+    <string name="st_desc">The dining room at Spice Temple is warm and dramatically lit and while there is little reference to Asia in the architecture, the space is intimate and relaxed, with subtle influences of the exotic street hawker food markets in China.</string>
+
+    <!-- Opera Bar -->
+    <string name="ob_name">Opera Bar</string>
+    <string name="ob_phone_num">+610292471666</string>
+    <string name="ob_url">https://operabar.com.au/</string>
+    <string name="ob_desc">Big venue with covered outdoor area and a relaxed vibe, for pizza and bistro food plus cocktails.</string>
+
+    <!-- La Disfida -->
+    <string name="ld_name">La Disfida</string>
+    <string name="ld_phone_num">+610297988299</string>
+    <string name="ld_url">http://www.ladisfida.com.au/</string>
+    <string name="ld_desc">Italian desserts and gourmet wood-fired pizzas, whipped up in a cosy space with outdoor tables.</string>
+
+    <!-- Baxter Inn-->
+    <string name="binn_name">Baxter Inn</string>
+    <string name="binn_phone_num">+610292215580</string>
+    <string name="binn_url">http://www.thebaxterinn.com/</string>
+    <string name="binn_desc">Sophisticated bar featuring an extensive selection of top-shelf whiskies, plus classic cocktails.</string>
+
+    <!-- 4 Pines Brewery-->
+    <string name="pb_name">4 Pins Brewery</string>
+    <string name="pb_phone_num">+610299762300</string>
+    <string name="pb_url">http://www.4pinesbeer.com.au/our-venue/brewpub-manly-brewery/</string>
+    <string name="pb_desc">Craft beers and gourmet pub food in a modern microbrewery with outdoor dining and a weekly magician.</string>
+
+
+    <!-- Stitch Bar -->
+    <string name="sb_name">Stitch Bar</string>
+    <string name="sb_phone_num">+610292790380</string>
+    <string name="sb_url">http://www/stitchbar.com/</string>
+    <string name="sb_desc">Buzzy vintage bar serving creative cocktails and American diner food like burgers, dogs and tacos.</string>
+
+    <!-- Park Hyatt -->
+    <string name="ph_name">Park Hyatt</string>
+    <string name="ph_phone_num">+610292561234</string>
+    <string name="ph_url">https://sydney.park.hyatt.com/en/hotel/home.html</string>
+    <string name="ph_desc">Across Sydney Harbour from the Sydney Opera House, this posh hotel in The Rocks neighbourhood is 8 minutes\' walk from the Museum of Contemporary Art Australia and 4 km from Darling Harbour.</string>
+
+    <!-- Oyolo 1888 -->
+    <string name="o_name">Ovolo 1888</string>
+    <string name="o_phone_num">+610285861888</string>
+    <string name="o_url">https://www.ovolohotels.com.au/ovolo1888darlingharbour/</string>
+    <string name="o_desc">A 5-minute walk from Convention Centre light rail station, this upscale hotel in a circa-1888 building is also less than 10 minutes\' walk from the Sydney Fish Market and the Harbourside ferry station on Cockle Bay.</string>
+
+    <!-- The Old Clare -->
+    <string name="oc_name">The Old Clare Hotel</string>
+    <string name="oc_phone_num">+610282778277</string>
+    <string name="oc_url">http://www.theoldclarehotel.com.au/</string>
+    <string name="oc_desc">Australian boutique hotel uniquely built within 2 iconic heritage buildings, encapsulating the varied aesthetic &amp; storied history of Chippendale.></string>
+
+    <!-- Rendezvous -->
+    <string name="r_name">Rendezvous Hotel</string>
+    <string name="r_phone_num">+61292122544</string>
+    <string name="r_url">https://www.rendezvoushotels.com/hotel/sydney-central</string>
+    <string name="r_desc">A vibrant hotel conveniently located adjacent to Railway Square in the heart of Sydney, Rendezvous Hotel Sydney Central combines clean lines, contemporary style and a personal feel to offer you a warm welcome.</string>
+
+    <!-- Side nav items -->
+    <string name="train_timetables">Train Timetables</string>
+    <string name="train_timetable_url">https://transportnsw.info/routes#/train</string>
+
+    <string name="bus_timetables">BussTimetables</string>
+    <string name="bus_timetable_url">https://transportnsw.info/routes#/bus</string>
+
+    <string name="ferry_timetables">Ferry Timetables</string>
+    <string name="ferry_timetable_url">https://transportnsw.info/routes#/ferry</string>
+
+    <string name="cycling_in_sydney">Cycling in Sydney</string>
+    <string name="cycling_url">http://www.sydneycycleways.net/</string>
+
+
 </resources>

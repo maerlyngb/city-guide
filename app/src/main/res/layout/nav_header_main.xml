@@ -4,14 +4,13 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/SideNavHeaderLayout">
 
+    <!-- Side nave title image -->
     <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/sydney"
-        android:scaleType="centerCrop"/>
+        android:id="@+id/side_nav_header_img"
+        style="@style/SideNavHeaderImage"
+        android:contentDescription="@string/sydney_scenery" />
 
     <!-- Side Nav Title Text -->
-    <TextView
-        style="@style/SideNavHeaderTitle"/>
+    <TextView style="@style/SideNavHeaderTitle" />
 
 </RelativeLayout>

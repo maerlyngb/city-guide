@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Main App Layout -->
+<!-- Top Level App Layout -->
 <android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     style="@style/AppContainer"
     tools:openDrawer="start">
 
-    <!-- App Content -->
+    <!-- Main App Content -->
     <include
-        layout="@layout/app_bar_main"
-        style="@style/MatchParent"/>
+        style="@style/MatchParent"
+        layout="@layout/app_content" />
 
     <!-- Side Nav -->
     <android.support.design.widget.NavigationView
         android:id="@+id/nav_view"
-        style="@style/NavView"
-        app:headerLayout="@layout/nav_header_main"
-        app:menu="@menu/activity_main_drawer" />
+        style="@style/NavView"/>
 
 </android.support.v4.widget.DrawerLayout>

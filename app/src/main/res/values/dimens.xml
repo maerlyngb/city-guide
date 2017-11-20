@@ -1,14 +1,49 @@
 <resources>
+    <!-- Sizes -->
 
-    <dimen name="activity_horizontal_margin">16dp</dimen>
-    <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dp_zero">0dp</dimen>
+
+    <dimen name="dp_xxsmall">2dp</dimen>
+    <dimen name="dp_xsmall">4dp</dimen>
+    <dimen name="dp_small">8dp</dimen>
+    <dimen name="dp_medium">16dp</dimen>
+    <dimen name="dp_large">24dp</dimen>
+    <dimen name="dp_xlarge">32dp</dimen>
+
+    <dimen name="sp_xxsmall">2sp</dimen>
+    <dimen name="sp_xsmall">4sp</dimen>
+    <dimen name="sp_small">8sp</dimen>
+    <dimen name="sp_medium">16sp</dimen>
+    <dimen name="sp_large">24sp</dimen>
+    <dimen name="sp_xlarge">32sp</dimen>
+
+
+    <!-- Shared -->
+
+    <dimen name="app_horizontal">@dimen/dp_medium</dimen>
+    <dimen name="app_vertical">@dimen/dp_medium</dimen>
+
 
     <!-- Nav header -->
 
-    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_vert">@dimen/dp_small</dimen>
     <dimen name="nav_header_height">224dp</dimen>
-    <dimen name="nav_header_title_text">32sp</dimen>
-    <dimen name="nav_header_title_vertical_spacing">32sp</dimen>
+    <dimen name="nav_header_title_txt">@dimen/sp_xlarge</dimen>
+    <dimen name="nav_header_title_vert">@dimen/sp_xlarge</dimen>
+
+    <!-- Attraction Summary List -->
+
+    <dimen name="summary_list_horizontal">@dimen/dp_small</dimen>
+    <dimen name="summary_list_vert">@dimen/dp_small</dimen>
+    <dimen name="summary_list_inner_padding">@dimen/dp_small</dimen>
+    <dimen name="summary_elevation">1dp</dimen>
+    <dimen name="summary_corner_radius">@dimen/dp_xsmall</dimen>
+
+    <!-- Attraction Detail Page -->
+
+    <dimen name="header_image_height">256dp</dimen>
+    <dimen name="header_image_scrim_height">150dp</dimen>
+    <dimen name="map_height">340dp</dimen>
+
 
 </resources>

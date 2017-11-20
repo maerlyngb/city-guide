@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    style="@style/MatchParent"
+    tools:context="io.maerlyn.cityguide.AttrDetailActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        style="@style/AttractionDetailAppBarLayout">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapsing_toolbar"
+            style="@style/AttractionDetailCollapsingToolbar">
+
+            <!-- Cover Image -->
+            <ImageView
+                android:id="@+id/backdrop"
+                style="@style/AttractionDetailImage" />
+
+            <!-- Image Scrim -->
+            <ImageView style="@style/AttractionDetailImageScrim" />
+
+            <!-- Toolbar -->
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                style="@style/AttractionDetailToolbar"
+                android:layout_height="?attr/actionBarSize" />
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- Scrolling Content Container -->
+    <android.support.v4.widget.NestedScrollView style="@style/AttractionDetailContentContainer">
+
+        <!-- Attraction Details -->
+        <LinearLayout style="@style/AttractionDetailContent">
+
+            <!-- Attraction Description -->
+            <TextView
+                android:id="@+id/attraction_description"
+                style="@style/AttractionDetailDescription" />
+
+            <!-- Action Buttons -->
+            <LinearLayout style="@style/AttractionDetailActionContainer">
+
+                <!-- Get directions to the attraction -->
+                <TextView
+                    android:id="@+id/attr_directions"
+                    style="@style/AttractionDetailDirections"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <!-- Call the people at the attraction -->
+                <TextView
+                    android:id="@+id/attr_phone"
+                    style="@style/AttractionDetailCall"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+
+                <!-- Visit the attraction website -->
+                <TextView
+                    android:id="@+id/attr_webiste"
+                    style="@style/AttractionDetailWebsite"
+                    android:background="?attr/selectableItemBackgroundBorderless" />
+            </LinearLayout>
+            <!-- Action Buttons -->
+
+            <!-- Activity Location -->
+            <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/map_height"
+                tools:context="io.maerlyn.cityguide.AttrDetailActivity" />
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+    <!-- / Scrolling Content Container -->
+
+</android.support.design.widget.CoordinatorLayout>

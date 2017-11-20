@@ -3,113 +3,98 @@ package io.maerlyn.cityguide;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.design.widget.TabLayout;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.Menu;
-import android.view.MenuItem;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+/**
+ * Main Activity to display sliding tabs of activity lists
+ *
+ * @author Maerlyn Broadbent
+ */
+public class MainActivity extends AppCompatActivity {
 
+    SideNavHandler navHandler;
+
+    /**
+     * Setup the 'home' screen
+     *
+     * @param savedInstanceState any state that was previously saved
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        navHandler = new SideNavHandler(this);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
 
         // set this toolbar as the main app toolbar
-        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle(R.string.city_name_and_country);
 
-        // create the button to open/close the side nav
+        // setup the side navigation drawer
+        SetupNavigationView(toolbar);
+
+        // setup swiping content
+        SetupTabbedContent();
+    }
+
+    /**
+     * Setup the side navigation drawer
+     *
+     * @param toolbar to place the toggle button
+     */
+    private void SetupNavigationView(Toolbar toolbar) {
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
+
+        // toggle button in action bar
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
         // listen for nav items being clicked
         NavigationView navigationView = findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
-
-
-        // setup tabbed content
-        ViewPager viewPager = findViewById(R.id.viewpager);
-        if (viewPager != null) {
-            setupViewPager(viewPager);
-        }
-
-        // display tabbed content
-        TabLayout tabLayout = findViewById(R.id.sliding_tabs);
-        tabLayout.setupWithViewPager(viewPager);
+        navigationView.setNavigationItemSelectedListener(this.navHandler);
     }
 
     /**
-     * Close the side nav pane when the back button is pressed
+     * Setup tabbed attraction tabs and content
+     */
+    private void SetupTabbedContent() {
+        ViewPager viewPager = findViewById(R.id.viewpager);
+
+        if (viewPager != null) {
+            AttrListPageAdapter adapter = new AttrListPageAdapter(getSupportFragmentManager());
+
+            // each fragment is one of the attraction lists
+            adapter.addFragment(AttrListFragment.newInstance(AttrType.VISIT), getString(R.string.visit_tab_title));
+            adapter.addFragment(AttrListFragment.newInstance(AttrType.EAT), getString(R.string.eat_tab_title));
+            adapter.addFragment(AttrListFragment.newInstance(AttrType.DRINK), getString(R.string.drink_tab_title));
+            adapter.addFragment(AttrListFragment.newInstance(AttrType.SLEEP), getString(R.string.sleep_tab_title));
+
+            viewPager.setAdapter(adapter);
+
+            // display tabbed content
+            TabLayout tabLayout = findViewById(R.id.tab_layout);
+            tabLayout.setupWithViewPager(viewPager);
+        }
+    }
+
+    /**
+     * Close the side nav pane when the back button is pressed.
+     * If the nav pane is already closed, perform the standard os action.
      */
     @Override
     public void onBackPressed() {
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        if (drawer.isDrawerOpen(GravityCompat.START)) {
-            drawer.closeDrawer(GravityCompat.START);
+        if (this.navHandler.isDrawerOpen()) {
+            this.navHandler.closeDrawer();
         } else {
             super.onBackPressed();
         }
-    }
-
-
-    /**
-     * Add items to the toolbar
-     *
-     * @param menu
-     * @return
-     */
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @SuppressWarnings("StatementWithEmptyBody")
-    @Override
-    public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
-
-        DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-        return true;
-    }
-
-    /**
-     * Display tabbed content
-     *
-     * @param viewPager pager that handles swiping through tabs
-     */
-    private void setupViewPager(ViewPager viewPager) {
-        FragmentAdapter fragmentAdapter = new FragmentAdapter(getSupportFragmentManager());
-        fragmentAdapter.addFragment(new AttractionListFragment(), "Visit");
-        fragmentAdapter.addFragment(new AttractionListFragment(), "Eat");
-        fragmentAdapter.addFragment(new AttractionListFragment(), "Drink");
-        fragmentAdapter.addFragment(new AttractionListFragment(), "Sleep");
-
-        viewPager.setAdapter(fragmentAdapter);
     }
 }

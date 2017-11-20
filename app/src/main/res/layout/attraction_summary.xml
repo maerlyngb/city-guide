@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    Summary view for each attraction
+
+    Recycler: AttrListItemRecyclerAdapter
+    Fragment: AttractionListFragment
+ -->
+
+
+<!-- Attraction Summary -->
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    style="@style/AttractionSummaryItem"
+    android:foreground="?android:attr/selectableItemBackground">
+
+    <LinearLayout style="@style/AttractionSummaryItemContents">
+
+        <!-- Attraction Image -->
+        <ImageView
+            android:id="@+id/attraction_image"
+            style="@style/AttractionSummaryImage"
+            android:contentDescription="@string/attraction_image" />
+
+        <LinearLayout style="@style/AttractionSummaryDetail">
+
+            <!-- Attraction Name -->
+            <TextView
+                android:id="@+id/attraction_name"
+                style="@style/AttractionSummaryTitle" />
+
+            <!-- Attraction Rating -->
+            <RatingBar
+                android:id="@+id/attraction_rating"
+                style="@style/AttractionSummaryRating"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
+
+

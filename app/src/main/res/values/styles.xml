@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
@@ -44,11 +44,21 @@
     <!-- Toolbar -->
 
     <style name="ToolbarContainer" parent="FullWidth">
+        <item name="elevation">@dimen/dp_zero</item>
     </style>
 
     <style name="Toolbar" parent="FullWidth">
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="android:background">?attr/colorPrimary</item>
+        <item name="layout_scrollFlags">scroll|enterAlways|snap</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <!-- Tabs -->
+
+    <style name="TabLayout" parent="FullWidth">
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
     </style>
 
     <!--Side Nav View-->
@@ -56,6 +66,8 @@
     <style name="NavView" parent="FullHeight">
         <item name="android:layout_gravity">start</item>
         <item name="android:fitsSystemWindows">true</item>
+        <item name="headerLayout">@layout/nav_header_main</item>
+        <item name="menu">@menu/activity_main_drawer</item>
     </style>
 
     <!-- Side Nav Header -->
@@ -68,21 +80,141 @@
         <item name="android:theme">@style/ThemeOverlay.AppCompat.Dark</item>
     </style>
 
+    <style name="SideNavHeaderImage" parent="MatchParent">
+        <item name="android:src">@drawable/sydney</item>
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
     <style name="SideNavHeaderTitle" parent="FullWidth">
         <item name="android:text">@string/city_name</item>
         <item name="android:textColor">@color/primaryText</item>
-        <item name="android:textSize">@dimen/nav_header_title_text</item>
-        <item name="android:paddingBottom">@dimen/activity_vertical_margin</item>
-        <item name="android:paddingLeft">@dimen/activity_horizontal_margin</item>
-        <item name="android:paddingRight">@dimen/activity_horizontal_margin</item>
-        <item name="android:paddingTop">@dimen/nav_header_title_vertical_spacing</item>
+        <item name="android:textSize">@dimen/nav_header_title_txt</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:paddingBottom">@dimen/app_vertical</item>
+        <item name="android:paddingLeft">@dimen/app_horizontal</item>
+        <item name="android:paddingRight">@dimen/app_horizontal</item>
+        <item name="android:paddingTop">@dimen/nav_header_title_vert</item>
+    </style>
+
+    <!-- Main App Layout -->
+    <style name="ContentLayout" parent="MatchParent">
+        <item name="android:orientation">vertical</item>
+        <item name="layout_behavior">@string/appbar_scrolling_view_behavior</item>
     </style>
 
     <!-- Attraction List -->
 
     <style name="AttractionList" parent="MatchParent">
         <item name="android:orientation">vertical</item>
-        <item name="android:padding">16dp</item>
+    </style>
+
+    <style name="AttractionSummaryItemContents" parent="FullWidth">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="AttractionSummaryItem" parent="FullWidth">
+        <item name="android:layout_marginLeft">@dimen/summary_list_horizontal</item>
+        <item name="android:layout_marginRight">@dimen/summary_list_horizontal</item>
+        <item name="android:layout_marginTop">@dimen/summary_list_vert</item>
+        <item name="cardElevation">@dimen/summary_elevation</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardCornerRadius">@dimen/summary_corner_radius</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="AttractionSummaryImage" parent="FullWidth">
+        <item name="android:scaleType">centerCrop</item>
+    </style>
+
+    <style name="AttractionSummaryDetail" parent="FullWidth">
+        <item name="android:orientation">horizontal</item>
+        <item name="android:layout_margin">@dimen/dp_small</item>
+    </style>
+
+    <style name="AttractionSummaryTitle" parent="WrapContent">
+        <item name="android:layout_weight">1</item>
+        <item name="android:textSize">@dimen/sp_medium</item>
+    </style>
+
+    <style name="AttractionSummaryRating" parent="android:Widget.Material.RatingBar.Small">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">right</item>
+        <item name="android:numStars">5</item>
+        <item name="android:stepSize">0.25</item>
+    </style>
+
+    <!-- Attraction Detail -->
+    <style name="AttractionDetailAppBarLayout" parent="MatchParent">
+        <item name="android:layout_height">@dimen/header_image_height</item>
+        <item name="android:theme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+
+    <style name="AttractionDetailCollapsingToolbar" parent="MatchParent">
+        <item name="layout_scrollFlags">scroll|exitUntilCollapsed</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="contentScrim">@color/colorPrimary</item>
+        <item name="expandedTitleTextAppearance">@style/TextAppearance.AppCompat.Title.Inverse</item>
+    </style>
+
+    <style name="AttractionDetailImage" parent="MatchParent">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="layout_collapseMode">parallax</item>
+    </style>
+
+    <style name="AttractionDetailImageScrim" parent="MatchParent">
+        <item name="android:layout_gravity">bottom</item>
+        <item name="android:background">@drawable/scrim</item>
+        <item name="android:layout_height">@dimen/header_image_scrim_height</item>
+    </style>
+
+    <style name="AttractionDetailToolbar" parent="MatchParent">
+        <item name="layout_collapseMode">pin</item>
+    </style>
+
+    <style name="AttractionDetailContentContainer" parent="MatchParent">
+        <item name="layout_behavior">@string/appbar_scrolling_view_behavior</item>
+    </style>
+
+    <style name="AttractionDetailContent" parent="MatchParent">
+        <item name="android:orientation">vertical</item>
+    </style>
+
+    <style name="AttractionDetailDescription" parent="FullWidth">
+        <item name="android:textSize">@dimen/sp_medium</item>
+        <item name="android:lineSpacingMultiplier">1.2</item>
+        <item name="android:padding">@dimen/dp_large</item>
+        <item name="android:background">@color/lightGray</item>
+    </style>
+
+    <style name="AttractionDetailActionContainer" parent="FullWidth">
+        <item name="android:layout_marginTop">@dimen/dp_xlarge</item>
+        <item name="android:layout_marginBottom">@dimen/dp_xlarge</item>
+    </style>
+
+    <style name="AttractionDetailActions" parent="WrapContent">
+        <item name="android:layout_width">@dimen/dp_zero</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:textColor">@color/colorSecondary</item>
+        <item name="android:textSize">@dimen/sp_medium</item>
+        <item name="android:clickable">true</item>
+    </style>
+
+    <style name="AttractionDetailDirections" parent="AttractionDetailActions">
+        <item name="android:drawableTop">@drawable/ic_directions</item>
+        <item name="android:text">@string/attr_directions</item>
+    </style>
+
+    <style name="AttractionDetailCall" parent="AttractionDetailActions">
+        <item name="android:drawableTop">@drawable/ic_phone</item>
+        <item name="android:text">@string/attr_call</item>
+    </style>
+
+    <style name="AttractionDetailWebsite" parent="AttractionDetailActions">
+        <item name="android:drawableTop">@drawable/ic_web</item>
+        <item name="android:text">@string/attr_website</item>
     </style>
 
 </resources>

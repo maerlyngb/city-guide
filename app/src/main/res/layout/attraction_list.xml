@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    style="@style/AttractionList">
+<!--
+    Recycler view to show a list of available attractions
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Attraction List Fragment!" />
-</LinearLayout>
+    Recycler: AttrListItemRecyclerAdapter
+    Fragment: AttractionListFragment
+    Child Layout: attraction_summary.xml
+ -->
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/my_recycler_view"
+    style="@style/MatchParent"/>

@@ -8,4 +8,5 @@
     <color name="colorSecondaryLight">#5eb8ff</color>
     <color name="primaryText">#212121</color>
     <color name="secondaryText">#fbc02d</color>
+    <color name="lightGray">#eeeeee</color>
 </resources>

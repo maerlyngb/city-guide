@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Main App Layout
+
+    Parent Layout: activity_main.xml
+-->
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MatchParent"
+    tools:context="io.maerlyn.cityguide.MainActivity">
+
+    <!-- Tool Bar Container -->
+    <android.support.design.widget.AppBarLayout
+        style="@style/ToolbarContainer">
+
+        <!-- Toolbar -->
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            style="@style/Toolbar"/>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <!-- Main App Content -->
+    <LinearLayout
+        style="@style/ContentLayout">
+
+        <!-- Tabs -->
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_layout"
+            app:tabSelectedTextColor="@color/colorSecondary"
+            style="@style/TabLayout"/>
+
+        <!-- Sliding Content -->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            style="@style/MatchParent" />
+
+    </LinearLayout>
+
+</android.support.design.widget.CoordinatorLayout>

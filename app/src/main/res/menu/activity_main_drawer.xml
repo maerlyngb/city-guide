@@ -5,13 +5,17 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:title="Public Transport" />
+            android:id="@+id/train"
+            android:title="@string/train_timetables" />
         <item
-            android:title="Item 2" />
+            android:id="@+id/bus"
+            android:title="@string/bus_timetables" />
         <item
-            android:title="Item 3" />
+            android:id="@+id/ferry"
+            android:title="@string/ferry_timetables" />
         <item
-            android:title="Item 4" />
+            android:id="@+id/bike"
+            android:title="@string/cycling_in_sydney" />
     </group>
 
 </menu>
